@@ -25,7 +25,7 @@ export default function Home() {
             An innovative{"\n"}software developer
           </p>
           <a
-            href="#"
+            href="/projects"
             className="mt-6 inline-block text-sm font-mono text-gray-600 hover:text-black transition"
           >
             Go through →
