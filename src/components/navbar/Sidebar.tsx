@@ -116,7 +116,7 @@ export const Sidebar = () => {
                             <Link href={route} key={name}>
                                 <div
                                     onClick={() => {
-                                        setExpanded(false);
+                                        if(isMobile) setExpanded(false);
                                         setActiveItem(name)
                                     }}
                                     className={`relative group cursor-pointer p-2 rounded-md transition

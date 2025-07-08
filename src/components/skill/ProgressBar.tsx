@@ -1,3 +1,6 @@
+
+
+import { motion } from 'motion/react';
 import React from 'react'
 
 interface ProgressBarProps {
@@ -15,13 +18,16 @@ export const ProgressBar = (props: ProgressBarProps) => {
                             mb-3 dark:text-white
                             rounded-full
                             border-2'>
-                <div className='h-full
-                                rounded-full
-                                bg-black
-                                dark:bg-white'
-                     style={{ width: `${progress}%` }}>
-
-                </div>
+        <motion.div
+          className="h-full rounded-full bg-black dark:bg-white"
+          initial={{ width: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{
+            duration: 1,
+            ease: [0.33, 1, 0.68, 1],
+            type: 'tween',
+          }}
+        />
 
             </div>
         </div>
