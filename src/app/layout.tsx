@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ThemeProvider } from 'next-themes'
+
 import { Navbar } from "@/components/navbar/Navbar";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -21,18 +23,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+        <ThemeProvider attribute="class">
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} font-mono text-gray-800
+      <body className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
                       bg-gray-100 
                       `}>
-        {/* Navbar */}
-        <Navbar />
-        {/* Main content */}
-        <main className="min-h-[calc(100vh-64px)]">
+
+          {/* Navbar */}
+          <Navbar />
+          {/* Main content */}
+          <main className="min-h-[calc(100svh-64px)]">
             {children}
-        </main>
+          </main>
       </body>
     </html>
+    </ThemeProvider>
   );
 }
 

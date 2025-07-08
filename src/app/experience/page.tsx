@@ -15,13 +15,28 @@ const experienceList: exp[] = [
         type: 'language',
     },
     {
-        name: 'Javascript/Typescript',
+        name: 'Javascript',
         progress: 70,
         type: 'language',
     },
     {
+        name: 'Typescript',
+        progress: 55,
+        type: 'language',
+    },
+    {
         name: 'Python',
+        progress: 50,
+        type: 'language',
+    },
+    {
+        name: 'Java',
         progress: 60,
+        type: 'language',
+    },
+    {
+        name: 'C/C++',
+        progress: 50,
         type: 'language',
     },
     {
@@ -78,8 +93,8 @@ const experienceList: exp[] = [
 
 export default function page() {
     return (
-        <div className="p-10 sm:p-20
-                    bg-white 
+        <div className="p-10 pb-15 sm:p-20
+                    bg-white dark:bg-black
                     font-mono">
             <div className="max-w-[1440px]
                             pt-18 sm:p-8"
@@ -88,7 +103,7 @@ export default function page() {
                 >
                     {/* Education */}
                     <div className='flex flex-col lg:min-h-40'>
-                        <h2 className="text-2xl font-medium text-gray-800 
+                        <h2 className="text-2xl font-medium text-gray-800 dark:text-white
                             pb-1
                             border-b border-gray-200
                             max-w-48
@@ -96,10 +111,10 @@ export default function page() {
                         >
                             Education
                         </h2>
-                        <p className='text-xl'>
+                        <p className='text-xl dark:text-white'>
                             Computer Science
                         </p>
-                        <p className='text-base text-gray-600'>
+                        <p className='text-base text-gray-600 dark:text-white'>
                             International University (2022 - Present)
                         </p>
                         <div className='flex-grow'></div>
@@ -109,7 +124,7 @@ export default function page() {
                     </div>
                     {/* Language */}
                     <div className='lg:min-h-40'>
-                        <h2 className="text-2xl font-medium text-gray-800 
+                        <h2 className="text-2xl font-medium text-gray-800 dark:text-white
                             pb-1
                             border-b border-gray-200
                             max-w-48
@@ -117,7 +132,8 @@ export default function page() {
                         >
                             Language
                         </h2>
-                        <div>
+                        <div className='grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] lg:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] 2xl:xl:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]
+                                            sm:max-h-50'>
                             {experienceList.filter(exp => exp.type === 'language').map((exp, index) => (
                                 <ProgressBar key={index} name={exp.name} progress={exp.progress} />
                             ))}
@@ -125,7 +141,7 @@ export default function page() {
                     </div>
                     {/* Tools & Framework */}
                     <div className='lg:min-h-40'>
-                        <h2 className="text-2xl font-medium text-gray-800 
+                        <h2 className="text-2xl font-medium text-gray-800 dark:text-white
                             pb-1
                             border-b border-gray-200
                             max-w-70
@@ -148,8 +164,8 @@ export default function page() {
                     <a
                         href="/about"
                         className="absolute right-0
-                                flex items-center 
-                                text-gray-700 hover:text-gray-900
+                                flex items-center
+                                text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
                                 hover:-right-3
                                 cursor-pointer 
                                 !rounded-button

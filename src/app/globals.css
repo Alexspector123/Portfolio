@@ -1,8 +1,11 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --app-height: 100vh;
+
 }
 
 body {
@@ -22,5 +25,11 @@ body {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --app-height: 100dvh;
   }
 }

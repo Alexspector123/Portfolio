@@ -63,8 +63,6 @@ export const Sidebar = () => {
         }
     };
 
-    const [hintName, setHintName] = useState(false);
-
     // For mobile
     useEffect(() => {
         const handleClickOutsideMobile = (e: MouseEvent) => {
@@ -85,7 +83,7 @@ export const Sidebar = () => {
     }, [isMobile, expanded]);
 
     return (
-        <div className="">
+        <div className="relative">
             <motion.div
                 ref={barRef}
                 onClick={handleClick}
@@ -101,12 +99,13 @@ export const Sidebar = () => {
                         : { width: expanded ? 230 : 40 }
                 }
                 transition={{ duration: 0.3 }}
-                className={`p-2 rounded-xl bg-gray-200 hover:bg-gray-300 transition
-          flex justify-center items-center
+                className={`absolute -top-4.5 right-0 sm:right-4
+                            p-2 rounded-xl bg-black dark:bg-white transition
+                            flex justify-center items-center
           ${isMobile ? "w-10" : "h-10"}
         `}
             >
-                {!expanded ? <FaBars className="w-5 h-5" /> : (
+                {!expanded ? <FaBars className="w-5 h-5 text-white dark:text-black" /> : (
                     <div
                         className={`flex items-center justify-between
                                     ${expanded ? `${isMobile ? "flex-col h-full" : "flex-row w-full p-2"}` : ""}
@@ -116,12 +115,15 @@ export const Sidebar = () => {
                         {navItems.map(({ name, route, icon, activeIcon }) => (
                             <Link href={route} key={name}>
                                 <div
-                                    onClick={() => setActiveItem(name)}
+                                    onClick={() => {
+                                        setExpanded(false);
+                                        setActiveItem(name)
+                                    }}
                                     className={`relative group cursor-pointer p-2 rounded-md transition
-                                                bg-transparent text-gray-600 hover:bg-gray-200 hover:text-black`}
+                                                bg-transparent text-white dark:text-black hover:bg-gray-200 hover:text-black`}
                                 >
                                     {activeItem === name ? activeIcon : icon}
-                                    <span className="absolute -bottom-4.5 left-0 text-sm hidden group-hover:block">
+                                    <span className="absolute -bottom-4.5 left-0 text-sm hidden group-hover:block dark:text-white">
                                         {name}
                                     </span>
                                 </div>

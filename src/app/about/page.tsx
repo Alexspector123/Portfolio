@@ -1,29 +1,24 @@
 import React from 'react'
 
 import { IoMail } from "react-icons/io5";
-import { IoMailOutline } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
-import { IoLocationOutline } from "react-icons/io5";
 import { IoShareSocialSharp } from "react-icons/io5";
-import { IoShareSocialOutline } from "react-icons/io5";
 import { AiFillLinkedin } from "react-icons/ai";
-import { AiOutlineLinkedin } from "react-icons/ai";
 import { RiGithubFill } from "react-icons/ri";
-import { RiGithubLine } from "react-icons/ri";
 import { PiReadCvLogoLight } from "react-icons/pi";
 import { PiReadCvLogoFill } from "react-icons/pi";
 
 export default function page() {
   return (
-    <div className='p-10 sm:p-20
-                    bg-white
+    <div className='p-10 pb-15 sm:p-20
+                    bg-white dark:bg-black
                     font-mono'>
       <div className='max-w-[1440px]
                       pt-18 sm:p-8'>
         <div className=''>
-          <h2 className="text-2xl font-medium text-gray-800 
+          <h2 className="text-2xl font-medium text-gray-800 dark:text-white
                             pb-2
-                            mb-4
+                            mb-10
                             border-b border-gray-200
                             max-w-48"
           >
@@ -33,27 +28,30 @@ export default function page() {
             {/* Information */}
             <div className='w-full'>
               <div className='float-left
-                            mr-4
+                            lg:mr-4
                             max-h-76 sm:max-h-100 md:max-h-[570px]'>
                 <div className='relative
-                              w-45 sm:w-70 md:w-90 xl:w-150 
-                              h-40 sm:h-100 md:h-125
+                              w-45 sm:w-65 md:w-80 xl:w-150 
+                              h-30 sm:h-100 md:h-125
                               '>
                   <img src="avt.jpg"
                     alt=""
                     className='absolute xl:top-0 xl:right-0 
-                           max-w-45 max-h-45 sm:max-w-60 sm:max-h-60 md:max-w-75 md:max-h-75 
+                           max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-75 md:max-h-75 
                             object-cover rounded-md' />
                   <img src="avt2.jpg"
                     alt=""
                     className='hidden sm:block absolute bottom-0 left-0 
-                              max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-75 md:max-h-75 
+                              max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-75 md:max-h-75
                               object-cover rounded-md' />
                 </div>
               </div>
               <div className=''>
-                <h3 className='text-xl font-medium mb-2'>Hello, I'm Hitori</h3>
-                <p className='text-base text-gray-700'>
+                <h3 className='text-xl font-medium dark:text-white
+                              mb-2'>
+                                Hello, I'm Hitori
+                </h3>
+                <p className='text-base text-gray-700 dark:text-gray-300'>
                   I am currently a third-year Computer Science student, passionate about software development and problem-solving. My academic journey has equipped me with a solid foundation in programming, algorithms, and system design, while also fostering a deep interest in building scalable and efficient web applications.
                   <br></br>
                   <br></br>
@@ -67,7 +65,8 @@ export default function page() {
             {/* Hobbies */}
             <div className='w-full'>
 
-              <h3 className='text-xl font-medium mb-2'>My Interest</h3>
+              <h3 className='text-xl font-medium dark:text-white
+                              mb-2'>My Interest</h3>
               <div className='hidden lg:block float-right
                             ml-4
                             max-h-300 sm:max-h-200 md:max-h-[570px]'>
@@ -88,12 +87,12 @@ export default function page() {
                   <img src="film.jpg"
                     alt=""
                     className='absolute bottom-0 right-0 md:left-1/2 md:transform md:-translate-x-1/2
-                              max-w-50 max-h-50 md:max-w-75 md:max-h-75 xl:max-w-85 xl:max-h-85
+                              max-w-50 max-h-50 md:max-w-75 md:max-h-75 xl:max-w-90 xl:max-h-90
                               object-cover rounded-md' />
 
                 </div>
               </div>
-              <div className='text-base text-gray-700'>
+              <div className='text-base text-gray-700 dark:text-gray-300'>
                 <div className='lg:hidden float-right
                             ml-4
                             max-h-250'>
@@ -131,7 +130,7 @@ export default function page() {
                   <img src="film.jpg"
                     alt=""
                     className='
-                              max-w-50 max-h-50 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
+                              max-w-50 max-h-50 sm:max-w-70 sm:max-h-70 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
                               object-cover rounded-md' />
                 </div>
                 <p>
@@ -142,11 +141,11 @@ export default function page() {
 
             <div className='w-full p-4'>
 
-              <div className='flex justify-center'>
-                <div className='inline-flex gap-15 items-center
-                              border-4 rounded-2xl
+              <div className='flex justify-center dark:text-white'>
+                <div className='inline-flex gap-7 sm:gap-15 items-center flex-col sm:flex-row 
+                              border-4 rounded-2xl dark:border-white
                               py-5 px-10'>
-                  <h3 className="text-2xl font-medium text-gray-800"
+                  <h3 className="text-2xl font-medium text-gray-800 dark:text-white"
                   >
                     Let's connect
                   </h3>
@@ -155,7 +154,9 @@ export default function page() {
                       <IoMail className='h-5 w-5' />
                       <div className='ml-4'>
                         <h4 className='text-[18px]'>Email</h4>
-                        <p className='text-base text-gray-500'>huyphantranthanh@gmail.com</p>
+                        <a 
+                          href="mailto:huyphantranthanh@gmail.com"
+                          className='text-base text-gray-500'>huyphantranthanh@gmail.com</a>
                       </div>
                     </div>
                     <div className='flex items-center'>
@@ -192,7 +193,7 @@ export default function page() {
             href="/"
             className="absolute left-0
                                 flex items-center 
-                                text-gray-700 hover:text-gray-900
+                                text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
                                 hover:-left-3
                                 cursor-pointer 
                                 !rounded-button

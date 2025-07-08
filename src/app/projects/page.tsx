@@ -25,7 +25,7 @@ const projectList: Project[] = [
 export default function ProjectsPage() {
   return (
     <div className="h-screen p-20
-                  bg-white 
+                  bg-white dark:bg-black
                     font-mono">
       <div className="max-w-[1440px]
                       mx-auto 
@@ -38,14 +38,14 @@ export default function ProjectsPage() {
           <div className="max-w-4xl 
                           mx-auto"
           >
-            <h2 className="text-2xl font-medium text-gray-800 
+            <h2 className="text-2xl font-medium text-gray-800 dark:text-white
                             pb-2 
                             border-b border-gray-200
                             max-w-48"
             >
               Projects
             </h2>
-            <div className="mt-12 
+            <div className="mt-12
                             space-y-16"
             >
               {projectList.map((project, index) => (
@@ -71,7 +71,7 @@ export default function ProjectsPage() {
               href="/experience"
               className="absolute right-0
                                 flex items-center 
-                                text-gray-700 hover:text-gray-900
+                                text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
                                 hover:-right-3
                                 cursor-pointer 
                                 !rounded-button
