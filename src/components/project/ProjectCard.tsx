@@ -1,58 +1,48 @@
 import React from 'react'
 
-import Image from 'next/image';
-
 interface ProjectCardProps {
     title: string;
     date: string;
     description: string;
     imageUrl: string;
     link: string;
+    type: string;
 }
 
 export const ProjectCard = (props: ProjectCardProps) => {
 
-    const { title, date, description, imageUrl, link } = props;
+    const { title, date, description, imageUrl, link, type } = props;
 
     return (
-        <div className="flex 
-                        h-60 w-full sm:max-w-3xl
-                        bg-white 
-                        shadow-md 
-                        p-6 
-                        rounded-lg 
-                        border border-gray-200
-                        gap-4
-                        flex-start">
-            <div className="relative 
-                            w-1/3 h-full">
-                <Image
-                    src="/mangadex.webp"
-                    alt="Mangadex Screenshot"
-                    fill
-                    className="object-fill rounded w-full h-full"
+        <div className="flex flex-col md:flex-row gap-2 sm:gap-8
+                        p-2
+                        transition-all duration-300 hover:translate-x-1
+                        shadow-md rounded-lg">
+            <div className="w-full md:w-1/3 overflow-hidden">
+                <img
+                    src={imageUrl}
+                    alt={title}
+                    className="w-full h-[250px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
             </div>
-
-            <div className="w-2/3 
-                            flex flex-col justify-between">
-                <div>
-                    <div className="text-xl mb-2">{title}</div>
-                    <p className="text-sm text-gray-500 mb-1">
-                        {date} |
-                        <a
+            <div className="w-full md:w-2/3 flex flex-col justify-center">
+                <h3 className="text-xl font-medium text-gray-800 mb-2">
+                    {title}
+                </h3>
+                <p className="text-sm text-gray-500 mb-1">
+                    {date}
+                </p>
+                <p className="text-gray-700">{type}</p>
+                <div className="mt-4">
+                    <a
                             href={`https://github.com/${link}`}
                             target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-500 hover:underline ml-1"
+                            className="text-sm text-gray-700 hover:text-gray-900 flex items-center cursor-pointer !rounded-button whitespace-nowrap"
                         >
-                            {link}
-                        </a>
-                    </p>
-                    <p className="text-gray-500">{description}</p>
+                            View details &rarr;
+                    </a>
                 </div>
             </div>
         </div>
-
     )
 }

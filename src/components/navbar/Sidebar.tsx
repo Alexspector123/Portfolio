@@ -85,7 +85,7 @@ export const Sidebar = () => {
     }, [isMobile, expanded]);
 
     return (
-        <div className="relative">
+        <div className="">
             <motion.div
                 ref={barRef}
                 onClick={handleClick}
@@ -101,9 +101,7 @@ export const Sidebar = () => {
                         : { width: expanded ? 230 : 40 }
                 }
                 transition={{ duration: 0.3 }}
-                className={`
-          absolute -top-4.5 right-0 sm:right-4
-          p-2 rounded-xl bg-gray-200 hover:bg-gray-300 transition
+                className={`p-2 rounded-xl bg-gray-200 hover:bg-gray-300 transition
           flex justify-center items-center
           ${isMobile ? "w-10" : "h-10"}
         `}
