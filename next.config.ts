@@ -1,13 +1,13 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export', // Quan trọng để static export
-  distDir: 'out', // Thư mục xuất ra sau khi build
+const nextConfig = {
+  output: 'export', // rất quan trọng để dùng `next export`
+  basePath: isProd ? '/hitori.github.io' : '',
+  assetPrefix: isProd ? '/hitori.github.io/' : '',
   images: {
-    unoptimized: true, // Bắt buộc khi dùng `output: export`
+    unoptimized: true, // vì Next export không hỗ trợ Image Optimization
   },
-  basePath: '', // Với github.io repo chính thì để rỗng
 };
 
 export default nextConfig;
