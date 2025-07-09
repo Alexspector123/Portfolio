@@ -38,7 +38,7 @@ export default function ProjectsPage() {
                       flex flex-col"
         >
           <main className="flex-grow 
-                          pt-8
+                          pt-18
                           sm:p-8"
           >
             <div className="max-w-4xl 
