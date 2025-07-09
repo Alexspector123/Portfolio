@@ -2,8 +2,7 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: 'export', // rất quan trọng để dùng `next export`
-  basePath: isProd ? '/hitori.github.io' : '',
+  basePath: '/hitori.github.io',
   assetPrefix: isProd ? '/hitori.github.io/' : '',
   images: {
     unoptimized: true, // vì Next export không hỗ trợ Image Optimization
