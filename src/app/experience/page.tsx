@@ -101,7 +101,8 @@ export default function page() {
         <PageTransition>
             <div className="p-10 pb-15 sm:p-20
                     bg-white dark:bg-black
-                    font-mono">
+                    font-mono
+                    ">
                 <div className="max-w-[1440px]
                             pt-18 sm:p-8"
                 >

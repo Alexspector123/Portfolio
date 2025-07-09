@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from 'react'
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 import PageTransition from "@/components/page/PageTransition";
 
@@ -21,7 +23,7 @@ export default function page() {
                     font-mono'>
         <div className='max-w-[1440px]
                       pt-18 sm:p-8'>
-          <div className=''>
+          <div>
             <h2 className="text-2xl font-medium text-gray-800 dark:text-white
                             pb-2
                             mb-10
@@ -82,7 +84,7 @@ export default function page() {
                   className=''>
                   <h3 className='text-xl font-medium dark:text-white
                               mb-2'>
-                    Hello, I'm Hitori
+                    Hello, I&apos;m Hitori
                   </h3>
                   <p className='text-base text-gray-700 dark:text-gray-300'>
                     I am currently a third-year Computer Science student, passionate about software development and problem-solving. My academic journey has equipped me with a solid foundation in programming, algorithms, and system design, while also fostering a deep interest in building scalable and efficient web applications.
@@ -156,14 +158,22 @@ export default function page() {
                   <div className='lg:hidden float-right
                             sm:ml-4
                             max-h-250'>
-                    <img src="code.jpeg"
-                      alt=""
-                      className='
-                              max-w-40 max-h-50 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
-                              object-cover rounded-md' />
+                    <div className="relative 
+                                    w-40 h-50 
+                                    sm:w-60 sm:h-60 
+                                    md:w-65 md:h-65 
+                                    xl:w-75 xl:h-75
+                                  ">
+                      <Image
+                        src="/code.jpeg"
+                        alt="code"
+                        fill
+                        className="object-cover rounded-md"
+                      />
+                    </div>
                   </div>
                   <p>
-                    Outside of studying, I enjoy exploring new tools and technologies—especially those related to UI and 3D animations. Thanks to platforms like Facebook and TikTok, I've been inspired to dive deeper into creative coding, spending a lot of time experimenting and learning through building.
+                    Outside of studying, I enjoy exploring new tools and technologies—especially those related to UI and 3D animations. Thanks to platforms like Facebook and TikTok, I&apos;ve been inspired to dive deeper into creative coding, spending a lot of time experimenting and learning through building.
                   </p>
                   <p>
                     I also have a strong passion for diagrams and system architecture. I often read and sketch different system designs to deepen my understanding of how things work under the hood.
@@ -174,27 +184,45 @@ export default function page() {
                             max-h-250
                             flex flex-col
                             items-end'>
-                    <img src="art1.webp"
-                      alt=""
-                      className='max-w-46 max-h-50 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
-                                object-cover rounded-md' />
+
+                    <div className="relative 
+                                    w-46 h-50 
+                                    sm:w-60 sm:h-60 
+                                    md:w-65 md:h-65 
+                                    xl:w-75 xl:h-75
+                                  ">
+                      <Image
+                        src="/art1.webp"
+                        alt="art preview"
+                        fill
+                        className="object-cover rounded-md"
+                      />
+                    </div>
                   </div>
                   <p>
-                    When I feel burnt out, I turn to art inspiration. Whether it's admiring paintings to explore color combinations or reading manga, I find visual storytelling incredibly powerful. My preference for minimalist design is largely influenced by manga panels—they're simple but rich in detail and composition.
+                    When I feel burnt out, I turn to art inspiration. Whether it&apos;s admiring paintings to explore color combinations or reading manga, I find visual storytelling incredibly powerful. My preference for minimalist design is largely influenced by manga panels—they&apos;re simple but rich in detail and composition.
                   </p>
                   <br />
                   <br className='lg:hidden hidden md:block' />
                   <div className='lg:hidden float-right
                             ml-4
                             max-h-250'>
-                    <img src="film.jpg"
-                      alt=""
-                      className='
-                              max-w-50 max-h-50 sm:max-w-70 sm:max-h-70 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
-                              object-cover rounded-md' />
+                    <div className="relative 
+                                      w-50 h-50 
+                                      sm:w-70 sm:h-70 
+                                      md:w-65 md:h-65 
+                                      xl:w-75 xl:h-75
+                                    ">
+                      <Image
+                        src="/film.jpg"
+                        alt="film"
+                        fill
+                        className="object-cover rounded-md"
+                      />
+                    </div>
                   </div>
                   <p>
-                    I'm also a huge fan of movies. While I mostly watch them for entertainment,I occasionally find myself analyzing screen layouts and cinematography. One of my biggest inspirations is Akira Kurosawa—I’ve watched all of his films, and his mastery of framing and movement has greatly influenced how I think about visual design and structure.
+                    I&apos;m also a huge fan of movies. While I mostly watch them for entertainment, I occasionally find myself analyzing screen layouts and cinematography. One of my biggest inspirations is Akira Kurosawa—I&apos;ve watched all of his films, and his mastery of framing and movement has greatly influenced how I think about visual design and structure.
                   </p>
                 </div>
               </div>
@@ -214,51 +242,51 @@ export default function page() {
                     className='inline-flex gap-7 sm:gap-15 items-center flex-col sm:flex-row 
                               border-4 rounded-2xl dark:border-white
                               py-5 px-10'>
-                      <h3 className="text-2xl font-medium text-gray-800 dark:text-white"
-                      >
-                        Let's connect
-                      </h3>
-                      <div className='flex flex-col gap-6'>
-                        <div className='flex items-center'>
-                          <IoMail className='h-5 w-5' />
-                          <div className='ml-4'>
-                            <h4 className='text-[18px]'>Email</h4>
-                            <a
-                              href="mailto:huyphantranthanh@gmail.com"
-                              className='text-base text-gray-500'>huyphantranthanh@gmail.com</a>
-                          </div>
+                    <h3 className="text-2xl font-medium text-gray-800 dark:text-white"
+                    >
+                      Let&apos;s connect
+                    </h3>
+                    <div className='flex flex-col gap-6'>
+                      <div className='flex items-center'>
+                        <IoMail className='h-5 w-5' />
+                        <div className='ml-4'>
+                          <h4 className='text-[18px]'>Email</h4>
+                          <a
+                            href="mailto:huyphantranthanh@gmail.com"
+                            className='text-base text-gray-500'>huyphantranthanh@gmail.com</a>
                         </div>
-                        <div className='flex items-center'>
-                          <FaLocationDot className='h-5 w-5' />
-                          <div className='ml-4'>
-                            <h4 className='text-[18px]'>Location</h4>
-                            <p className='text-base text-gray-500'>Ho Chi Minh City, VietNam</p>
-                          </div>
+                      </div>
+                      <div className='flex items-center'>
+                        <FaLocationDot className='h-5 w-5' />
+                        <div className='ml-4'>
+                          <h4 className='text-[18px]'>Location</h4>
+                          <p className='text-base text-gray-500'>Ho Chi Minh City, VietNam</p>
                         </div>
-                        <div className='flex items-center'>
-                          <FaRegFileLines className='h-5 w-5' />
-                          <div className='ml-4 flex items-center'>
-                            <h4 className='text-[18px]'>My Resume:</h4>
-                            <a
-                              href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
-                              target='_blank'>
-                              <PiReadCvLogoFill className='h-8 w-8' />
-                            </a>
-                          </div>
+                      </div>
+                      <div className='flex items-center'>
+                        <FaRegFileLines className='h-5 w-5' />
+                        <div className='ml-4 flex items-center'>
+                          <h4 className='text-[18px]'>My Resume:</h4>
+                          <a
+                            href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
+                            target='_blank'>
+                            <PiReadCvLogoFill className='h-8 w-8' />
+                          </a>
                         </div>
-                        <div className='flex items-center'>
-                          <IoShareSocialSharp className='h-5 w-5' />
-                          <div className='ml-4 flex gap-2'>
-                            <a href="https://linkedin.com/in/huythanhphan"
-                              target='_blank'>
-                              <AiFillLinkedin className='h-8 w-8' />
-                            </a>
-                            <a href="https://github.com/Alexspector123"
-                              target='_blank'>
-                              <RiGithubFill className='h-8 w-8' />
-                            </a>
-                          </div>
+                      </div>
+                      <div className='flex items-center'>
+                        <IoShareSocialSharp className='h-5 w-5' />
+                        <div className='ml-4 flex gap-2'>
+                          <a href="https://linkedin.com/in/huythanhphan"
+                            target='_blank'>
+                            <AiFillLinkedin className='h-8 w-8' />
+                          </a>
+                          <a href="https://github.com/Alexspector123"
+                            target='_blank'>
+                            <RiGithubFill className='h-8 w-8' />
+                          </a>
                         </div>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
@@ -270,7 +298,7 @@ export default function page() {
                             sm:mt-17
                             flex justify-end"
           >
-            <a
+            <Link
               href="/"
               className="absolute left-0
                                 flex items-center 
@@ -281,7 +309,7 @@ export default function page() {
                                 duration-300"
             >
               &larr; Go back Home
-            </a>
+            </Link>
           </div>
         </div>
       </div>
