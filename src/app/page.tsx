@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <PageTransition>
       <div className={`flex flex-col md:flex-row justify-center gap-10 md:justify-around md:align-middle md:items-center 
-                      h-screen p-20 py-0 dark:bg-black`}>
+                      h-screen px-10 sm:px-20 dark:bg-black`}>
         <div className="block md:hidden
                         md:self-center">
           <motion.img

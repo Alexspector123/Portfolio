@@ -6,10 +6,14 @@ import { PiReadCvLogoFill } from "react-icons/pi";
 
 export const Footer = () => {
     return (
-        <footer className="bg-white m-4">
-            <div className="w-full mx-auto max-w-screen-xl px-10 pb-5 md:px-20 md:flex md:items-center md:justify-between">
-                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Copyright&copy; 2025 
-                    <a href="https://flowbite.com/" className="hover:underline"> Hitori
+        <footer className="bg-white dark:bg-black ">
+            <div className="w-full mx-auto max-w-screen-xl
+                            px-10 pb-5 md:px-20
+                            flex flex-col items-center gap-1 sm:gap-4 md:flex-row md:items-center md:justify-between">
+                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400
+                                ">
+                                    Copyright &copy; 2025&nbsp;
+                    <a href="https://flowbite.com/" className="hover:underline">Hitori
                     </a>
                 </span>
                 <div className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
