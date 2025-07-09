@@ -57,8 +57,8 @@ export const ContactCard = () => {
                             exit={{ y: 30, opacity: 0 }}
                             className='inline-flex gap-7 sm:gap-15 items-center flex-col sm:flex-row 
                               border-4 rounded-2xl dark:border-white
-                              py-5 px-10'>
-                            <h3 className="text-2xl font-medium text-gray-800 dark:text-white"
+                              py-5 px-6 sm:px-10'>
+                            <h3 className="text-xl sm:text-2xl font-medium text-gray-800 dark:text-white"
                             >
                                 Let&apos;s connect
                             </h3>
@@ -66,17 +66,17 @@ export const ContactCard = () => {
                                 <div className='flex items-center'>
                                     <IoMail className='h-5 w-5' />
                                     <div className='ml-4'>
-                                        <h4 className='text-[18px]'>Email</h4>
+                                        <h4 className='text-base sm:text-[18px]'>Email</h4>
                                         <a
                                             href="mailto:huyphantranthanh@gmail.com"
-                                            className='text-base text-gray-500'>huyphantranthanh@gmail.com</a>
+                                            className='text-sm sm:text-base text-gray-500'>huyphantranthanh@gmail.com</a>
                                     </div>
                                 </div>
                                 <div className='flex items-center'>
                                     <FaLocationDot className='h-5 w-5' />
                                     <div className='ml-4'>
-                                        <h4 className='text-[18px]'>Location</h4>
-                                        <p className='text-base text-gray-500'>Ho Chi Minh City, VietNam</p>
+                                        <h4 className='text-base sm:text-[18px]'>Location</h4>
+                                        <p className='text-sm sm:text-base text-gray-500'>Ho Chi Minh City, VietNam</p>
                                     </div>
                                 </div>
                                 <div className='flex items-center'>
@@ -84,18 +84,18 @@ export const ContactCard = () => {
                                     <div className='ml-4 flex gap-2'>
                                         <a href="https://linkedin.com/in/huythanhphan"
                                             target='_blank'>
-                                            <AiFillLinkedin className='h-8 w-8' />
+                                            <AiFillLinkedin className='w-7 h-7 sm:h-8 sm:w-8' />
                                         </a>
                                         <a href="https://github.com/Alexspector123"
                                             target='_blank'>
-                                            <RiGithubFill className='h-8 w-8' />
+                                            <RiGithubFill className='w-7 h-7 sm:h-8 sm:w-8' />
                                         </a>
                                     </div>
                                 </div>
                                 <div className='flex items-center'>
                                     <FaFileLines className='h-5 w-5' />
                                     <div className='ml-4 flex items-center'>
-                                        <h4 className='text-[18px]'>My Resume:</h4>
+                                        <h4 className='text-[18px]'>My Resume </h4>
                                         <a
                                             href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
                                             target='_blank'>
@@ -120,7 +120,7 @@ export const ContactCard = () => {
                             className=' w-100
                                         inline-flex gap-7 sm:gap-9 flex-col
                                         border-4 rounded-2xl dark:border-white
-                                        py-5 px-10'>
+                                        py-5 px-5 sm:px-10'>
                             <h3 className="text-2xl font-medium self-center text-gray-800 dark:text-white"
                             >
                                 Contact me
@@ -128,9 +128,9 @@ export const ContactCard = () => {
                             <form onSubmit={handleSubmit} className='flex flex-col gap-6'>
                                 <div className='flex flex-col gap-2'>
                                     <label htmlFor="Name" className='text-[18px]'>Name</label>
-                                    <input 
+                                    <input
                                         name="name"
-                                        type="text" 
+                                        type="text"
                                         required
                                         value={msgForm.name}
                                         onChange={handleChange}
@@ -138,9 +138,9 @@ export const ContactCard = () => {
                                 </div>
                                 <div className='flex flex-col gap-2'>
                                     <label htmlFor="Email" className='text-[18px]'>Email</label>
-                                    <input 
+                                    <input
                                         name="email"
-                                        type="email" 
+                                        type="email"
                                         required
                                         value={msgForm.name}
                                         onChange={handleChange}
@@ -148,8 +148,8 @@ export const ContactCard = () => {
                                 </div>
                                 <div className='flex flex-col gap-2'>
                                     <label htmlFor="Message" className='text-[18px]'>Message</label>
-                                    <textarea 
-                                        name="message" 
+                                    <textarea
+                                        name="message"
                                         id="message"
                                         value={msgForm.name}
                                         onChange={handleChange}
@@ -172,8 +172,18 @@ export const ContactCard = () => {
             <div className='flex justify-center items-center
                             mt-5
                             '>
-                <p className='inline dark:text-white '>{state ? "You can leave a mail for me via" : ""} </p>
-                <button className='state-button '
+                <p className='inline-block dark:text-white '>{state ? "You can leave a mail for me via" : ""} </p>
+                <button className=' ml-2
+                                    bg-black dark:bg-white
+                                    text-sm text-white dark:text-black
+                                    rounded-md
+                                    p-2.5
+                                    block md:hidden'
+                    onClick={toggleState}>
+                    <span>{state ? "Click" : "Go back"}</span>
+                </button>
+                <button className=' hidden md:block
+                                    state-button'
                     onClick={toggleState}>
                     <span>{state ? "Click" : "Go back"}</span>
                 </button>
