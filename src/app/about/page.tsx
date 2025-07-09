@@ -264,13 +264,13 @@ export default function page() {
                         </div>
                       </div>
                       <div className='flex items-center'>
-                        <FaRegFileLines className='h-5 w-5' />
+                        <PiReadCvLogoFill className='h-5 w-5' />
                         <div className='ml-4 flex items-center'>
                           <h4 className='text-[18px]'>My Resume:</h4>
                           <a
                             href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
                             target='_blank'>
-                            <PiReadCvLogoFill className='h-8 w-8' />
+                            < FaRegFileLines className='h-8 w-8' />
                           </a>
                         </div>
                       </div>

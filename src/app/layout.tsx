@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 
 import { Navbar } from "@/components/navbar/Navbar";
+import { Footer } from "@/components/footer/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
           {/* Main content */}
           <main className="min-h-[calc(100svh-64px)]">
             {children}
+            <Footer />
           </main>
       </body>
     </html>
