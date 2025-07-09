@@ -9,8 +9,25 @@ export default function Home() {
 
   return (
     <PageTransition>
-      <div className={`flex flex-col justify-center h-screen p-20 dark:bg-black`}>
-        <div className="max-w-xl lg:p-30">
+      <div className={`flex flex-col md:flex-row justify-center gap-10 md:justify-around md:align-middle md:items-center h-screen p-20 dark:bg-black`}>
+        <div className="block md:hidden
+                        md:self-center">
+          <motion.img
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              delay: 0.3,
+              ease: [0.33, 1, 0.68, 1],
+              type: "tween"
+            }}
+            src="avt2.jpg"
+            alt=""
+            className='max-w-60 max-h-60 sm:max-w-70 sm:max-h-70 
+                            object-cover border-3 dark:border-white rounded-md'/>
+        </div>
+        <div className="
+                        max-w-xl lg:p-30">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -41,6 +58,21 @@ export default function Home() {
           >
             Go through →
           </a>
+        </div>
+        <div className="hidden md:block self-center">
+          <motion.img
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              delay: 0.3,
+              ease: [0.33, 1, 0.68, 1],
+              type: "tween"
+            }}
+            src="avt2.jpg"
+            alt=""
+            className='max-w-75 max-h-75 xl:max-h-[2048px] xl:max-w-[2048px] 
+                            object-cover border-3 dark:border-white rounded-md'/>
         </div>
       </div>
     </PageTransition>

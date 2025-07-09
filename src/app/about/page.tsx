@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useState } from 'react'
 
 import PageTransition from "@/components/page/PageTransition";
 
@@ -9,14 +9,14 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { AiFillLinkedin } from "react-icons/ai";
 import { RiGithubFill } from "react-icons/ri";
-import { PiReadCvLogoLight } from "react-icons/pi";
 import { PiReadCvLogoFill } from "react-icons/pi";
+import { FaRegFileLines } from "react-icons/fa6";
 import { motion } from 'framer-motion';
 
 export default function page() {
   return (
     <PageTransition>
-      <div className='p-10 pb-15 sm:p-20
+      <div className='p-10 pb-15 md:p-20
                     bg-white dark:bg-black
                     font-mono'>
         <div className='max-w-[1440px]
@@ -107,17 +107,44 @@ export default function page() {
                               w-45 sm:w-50 md:w-130 xl:w-150 
                               h-160 sm:h-175 md:h-120 xl:h-135
                               '>
-                    <img src="art.webp"
+                    <motion.img
+                      initial={{ y: 30, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 2,
+                        delay: 0.3,
+                        ease: [0.33, 1, 0.68, 1],
+                        type: "tween"
+                      }}
+                      src="code.jpeg"
                       alt=""
                       className='absolute top-55 md:top-5 right-0
                            max-w-45 max-h-45 sm:max-w-70 sm:max-h-70 xl:max-w-75 xl:max-h-75
                             object-cover rounded-md' />
-                    <img src="code.png"
+                    <motion.img
+                      initial={{ y: 30, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 2.5,
+                        delay: 0.4,
+                        ease: [0.33, 1, 0.68, 1],
+                        type: "tween"
+                      }}
+                      src="art.webp"
                       alt=""
                       className='absolute right-0 md:top-0 md:left-0 
                               max-w-40 max-h-40 sm:max-w-70 sm:max-h-70 xl:max-w-75 xl:max-h-75
                               object-cover rounded-md' />
-                    <img src="film.jpg"
+                    <motion.img
+                      initial={{ y: 30, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 3,
+                        delay: 0.4,
+                        ease: [0.33, 1, 0.68, 1],
+                        type: "tween"
+                      }}
+                      src="film.jpg"
                       alt=""
                       className='absolute bottom-0 right-0 md:left-1/2 md:transform md:-translate-x-1/2
                               max-w-50 max-h-50 md:max-w-75 md:max-h-75 xl:max-w-90 xl:max-h-90
@@ -132,7 +159,7 @@ export default function page() {
                     <img src="code.jpeg"
                       alt=""
                       className='
-                              max-w-40 max-h-50 sm:max-w-50 sm:max-h-50 xl:max-w-75 xl:max-h-75
+                              max-w-40 max-h-50 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
                               object-cover rounded-md' />
                   </div>
                   <p>
@@ -149,7 +176,7 @@ export default function page() {
                             items-end'>
                     <img src="art1.webp"
                       alt=""
-                      className='max-w-46 max-h-50 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
+                      className='max-w-46 max-h-50 sm:max-w-60 sm:max-h-60 md:max-w-65 md:max-h-65 xl:max-w-75 xl:max-h-75
                                 object-cover rounded-md' />
                   </div>
                   <p>
@@ -187,40 +214,51 @@ export default function page() {
                     className='inline-flex gap-7 sm:gap-15 items-center flex-col sm:flex-row 
                               border-4 rounded-2xl dark:border-white
                               py-5 px-10'>
-                    <h3 className="text-2xl font-medium text-gray-800 dark:text-white"
-                    >
-                      Let's connect
-                    </h3>
-                    <div className='flex flex-col gap-6'>
-                      <div className='flex items-center'>
-                        <IoMail className='h-5 w-5' />
-                        <div className='ml-4'>
-                          <h4 className='text-[18px]'>Email</h4>
-                          <a
-                            href="mailto:huyphantranthanh@gmail.com"
-                            className='text-base text-gray-500'>huyphantranthanh@gmail.com</a>
+                      <h3 className="text-2xl font-medium text-gray-800 dark:text-white"
+                      >
+                        Let's connect
+                      </h3>
+                      <div className='flex flex-col gap-6'>
+                        <div className='flex items-center'>
+                          <IoMail className='h-5 w-5' />
+                          <div className='ml-4'>
+                            <h4 className='text-[18px]'>Email</h4>
+                            <a
+                              href="mailto:huyphantranthanh@gmail.com"
+                              className='text-base text-gray-500'>huyphantranthanh@gmail.com</a>
+                          </div>
                         </div>
-                      </div>
-                      <div className='flex items-center'>
-                        <FaLocationDot className='h-5 w-5' />
-                        <div className='ml-4'>
-                          <h4 className='text-[18px]'>Location</h4>
-                          <p className='text-base text-gray-500'>Ho Chi Minh City, VietNam</p>
+                        <div className='flex items-center'>
+                          <FaLocationDot className='h-5 w-5' />
+                          <div className='ml-4'>
+                            <h4 className='text-[18px]'>Location</h4>
+                            <p className='text-base text-gray-500'>Ho Chi Minh City, VietNam</p>
+                          </div>
                         </div>
-                      </div>
-                      <div className='flex items-center'>
-                        <IoShareSocialSharp className='h-5 w-5' />
-                        <div className='ml-4 flex gap-2'>
-                          <a href="https://linkedin.com/in/huythanhphan"
-                            target='_blank'>
-                            <AiFillLinkedin className='h-8 w-8' />
-                          </a>
-                          <a href="https://github.com/Alexspector123"
-                            target='_blank'>
-                            <RiGithubFill className='h-8 w-8' />
-                          </a>
+                        <div className='flex items-center'>
+                          <FaRegFileLines className='h-5 w-5' />
+                          <div className='ml-4 flex items-center'>
+                            <h4 className='text-[18px]'>My Resume:</h4>
+                            <a
+                              href="https://drive.google.com/file/d/1RmGP0RPj3-I1Hwwm-hpodUhQtb7Je8q5/view?usp=sharing"
+                              target='_blank'>
+                              <PiReadCvLogoFill className='h-8 w-8' />
+                            </a>
+                          </div>
                         </div>
-                      </div>
+                        <div className='flex items-center'>
+                          <IoShareSocialSharp className='h-5 w-5' />
+                          <div className='ml-4 flex gap-2'>
+                            <a href="https://linkedin.com/in/huythanhphan"
+                              target='_blank'>
+                              <AiFillLinkedin className='h-8 w-8' />
+                            </a>
+                            <a href="https://github.com/Alexspector123"
+                              target='_blank'>
+                              <RiGithubFill className='h-8 w-8' />
+                            </a>
+                          </div>
+                        </div>
                     </div>
                   </motion.div>
                 </div>
