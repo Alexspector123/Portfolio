@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Bắt buộc khi dùng `output: export`
   },
-  basePath: '', // Với github.io repo chính thì để rỗng
 };
 
 export default nextConfig;
