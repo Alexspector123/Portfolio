@@ -32,7 +32,7 @@ export default function page() {
             >
               About Me
             </h2>
-            <div className='flex flex-col gap-20'>
+            <div className='flex flex-col gap-15 sm:gap-20'>
               {/* Information */}
               <div className='w-full'>
                 <div className='float-left

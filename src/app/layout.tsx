@@ -27,19 +27,20 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
     <html lang="en">
       <body className={`${jetbrainsMono.variable} font-mono text-gray-800 dark:text-white
-                      bg-gray-100 
+                      bg-gray-100
+                      min-h-screen 
+                      flex flex-col
                       `}>
 
           {/* Navbar */}
           <Navbar />
           {/* Main content */}
-          <main className="min-h-[calc(100svh-64px)]">
+          <main className="flex-grow">
             {children}
-            <Footer />
           </main>
+          <Footer />
       </body>
     </html>
     </ThemeProvider>
   );
 }
-

@@ -81,7 +81,7 @@ export default function ProjectsPage() {
             <div className="relative
                             mt-10
                             sm:mt-17
-                            flex justify-end"
+                            flex justify-end h-8"
             >
               <a
                 href="/experience"
