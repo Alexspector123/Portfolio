@@ -9,6 +9,7 @@ export const Footer = () => {
         <footer className="bg-white dark:bg-black ">
             <div className="w-full mx-auto max-w-screen-xl
                             px-10 pb-5 md:px-20
+                            md:mt-15
                             flex flex-col items-center gap-1 sm:gap-4 md:flex-row md:items-center md:justify-between">
                 <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400
                                 ">

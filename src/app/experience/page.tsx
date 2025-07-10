@@ -99,12 +99,13 @@ const experienceList: exp[] = [
 export default function page() {
     return (
         <PageTransition>
-            <div className="p-10 pb-15 sm:p-20
+            <div className="p-10 pb-15 sm:p-20 md:pb-0
                     bg-white dark:bg-black
                     font-mono
                     ">
                 <div className="max-w-[1440px]
-                            pt-18 sm:p-8"
+                            h-full
+                            pt-18 xl:p-8"
                 >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-15"
                     >
@@ -175,25 +176,29 @@ export default function page() {
                             </div>
                         </div>
                     </div>
-                    <div className="relative
+                </div>
+
+                <div className="relative
                             mt-5
+                            w-full h-6
                             sm:mt-17
                             flex justify-end"
-                    >
-                        <a
-                            href="/about"
-                            className="absolute right-0
+                >
+                    <a
+                        href="/about"
+                        className="absolute lg:top-8 right-0
                                 flex items-center
                                 text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-300
                                 hover:-right-3
-                                cursor-pointer 
+                                cursor-pointer
                                 !rounded-button
                                 duration-300"
-                        >
-                            Next &rarr;
-                        </a>
-                    </div>
+                    >
+                        Next &rarr;
+                    </a>
                 </div>
+            </div>
+            <div className='hidden xl:block w-full h-2.5'>
             </div>
         </PageTransition>
     )

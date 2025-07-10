@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 export default function page() {
   return (
     <PageTransition>
-      <div className='p-10 pb-15 md:p-20
+      <div className='p-10 pb-20 md:p-20 md:pb-0
                     bg-white dark:bg-black
                     font-mono'>
         <div className='max-w-[1440px]
@@ -34,7 +34,7 @@ export default function page() {
                             max-h-76 sm:max-h-100 md:max-h-[570px]'>
                   <div className='relative
                               w-44 sm:w-65 md:w-80 xl:w-150 
-                              h-30 sm:h-100 md:h-125
+                              h-30 sm:h-100 md:h-110
                               '>
                     <motion.img
                       initial={{ y: 30, opacity: 0 }}
@@ -48,7 +48,7 @@ export default function page() {
                       src="avt.jpg"
                       alt=""
                       className='absolute xl:top-0 xl:right-0 
-                           max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-75 md:max-h-75 
+                           max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-73 md:max-h-73
                             object-cover rounded-md' />
                     <motion.img
                       initial={{ y: 30, opacity: 0 }}
@@ -62,7 +62,7 @@ export default function page() {
                       src="avt2.jpg"
                       alt=""
                       className='hidden sm:block absolute bottom-0 left-0 
-                              max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-75 md:max-h-75
+                              max-w-40 max-h-40 sm:max-w-60 sm:max-h-60 md:max-w-73 md:max-h-73
                               object-cover rounded-md' />
                   </div>
                 </div>
@@ -81,13 +81,10 @@ export default function page() {
                     Hello, I&apos;m Hitori
                   </h3>
                   <p className='text-base text-gray-700 dark:text-gray-300'>
-                    I am currently a third-year Computer Science student, passionate about software development and problem-solving. My academic journey has equipped me with a solid foundation in programming, algorithms, and system design, while also fostering a deep interest in building scalable and efficient web applications.
+                    I am currently a third-year Computer Science student passionate about software development and problem-solving. With a solid foundation in programming, algorithms, and system design, I enjoy building scalable, efficient web applications. I&apos;m comfortable working with both frontend and backend technologies, and I&apos;m always eager to learn more. 
                     <br></br>
                     <br></br>
                     Beyond technical knowledge, I bring a strong set of soft skills that enhance both individual and collaborative work environments. I thrive in teamwork, value analytical thinking for solving complex challenges, and communicate ideas clearly with both technical and non-technical audiences. My adaptability allows me to learn quickly and remain effective in fast-paced or changing situations.
-                    <br></br>
-                    <br></br>
-                    I’m comfortable working with both frontend and backend technologies, and I’m always eager to learn more. My goal is to become a full-stack developer who not only builds functional applications but also creates great user experiences. I’m especially interested in working on impactful projects that improve people’s lives and in teams where I can continuously grow by learning from others and contributing meaningfully.
                   </p>
                 </motion.div>
               </div>
