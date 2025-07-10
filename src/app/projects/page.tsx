@@ -30,7 +30,7 @@ const projectList: Project[] = [
 export default function ProjectsPage() {
   return (
     <PageTransition>
-      <div className="h-screen p-10 pb-15 sm:p-20
+      <div className="min-h-[100svh] p-10 pb-15 sm:p-20
                   bg-white dark:bg-black
                     font-mono">
         <div className="max-w-[1440px]

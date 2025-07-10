@@ -180,12 +180,12 @@ export const ContactCard = () => {
                                     p-2.5
                                     block md:hidden'
                     onClick={toggleState}>
-                    <span>{state ? "Click" : "Go back"}</span>
+                    <span>{state ? "Click" : "Back"}</span>
                 </button>
                 <button className=' hidden md:block
                                     state-button'
                     onClick={toggleState}>
-                    <span>{state ? "Click" : "Go back"}</span>
+                    <span>{state ? "Click" : "Back"}</span>
                 </button>
             </div>
         </div>
