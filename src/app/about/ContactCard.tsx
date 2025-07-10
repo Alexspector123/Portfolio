@@ -142,7 +142,7 @@ export const ContactCard = () => {
                                         name="email"
                                         type="email"
                                         required
-                                        value={msgForm.name}
+                                        value={msgForm.email}
                                         onChange={handleChange}
                                         className='text-base border-2 border-black dark:border-white rounded-md w-full py-1' />
                                 </div>
@@ -151,7 +151,7 @@ export const ContactCard = () => {
                                     <textarea
                                         name="message"
                                         id="message"
-                                        value={msgForm.name}
+                                        value={msgForm.message}
                                         onChange={handleChange}
                                         className='border-2 border-black dark:border-white rounded-md w-full h-30'></textarea>
                                 </div>
